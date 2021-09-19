@@ -11,10 +11,8 @@ int main()
 {
     int pennies;
     int nickles;
-
     int dimes;
  
-
     int quarters;
 
 
@@ -57,6 +55,42 @@ int main()
     else if (pennies > 1) {
         std::cout << "You have : "; pennies; "pennies";
     }
+
+    if (nickles = 1) {
+        std::cout << " You have 1 nickle";
+    }
+    else if (nickles > 1) {
+        std::cout << " You have :"; nickles; "nickles";
+    }
+
+    if (dimes = 1) {
+        std::cout << " You have 1 dime";
+    }
+    else if (dimes > 1) {
+        std::cout << " You have :"; dimes; "dimes";
+    }
+
+    if (quarters = 1) {
+        std::cout << " You have 1 quarter";
+    }
+    else if (quarters > 1) {
+        std::cout << " You have :"; quarters; "quarters";
+    }
+
+    if (halfdol = 1) {
+        std::cout << " You have 1 half dollar";
+    }
+    else if (halfdol > 1) {
+        std::cout << " You have :"; halfdol; "half dollars";
+    }
+
+    if (largc = 1) {
+        std::cout << " You have 1 dollar coin";
+    }
+    else if (largc > 1) {
+        std::cout << " You have :"; largc; "dollar coins";
+    }
+
 
     std::cout << " You have a total of: ";
     float cents = pennies + d + q + hd + l;
