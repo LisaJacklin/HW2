@@ -43,7 +43,7 @@ int main()
     if (pennies = 1) {
         std::cout << " You have 1 penny\n";
     }
-     else if (pennies != 1) {
+     else if (pennies > 1) {
         std::cout << "You have : "; pennies; "pennies\n";
     }
 
