@@ -12,26 +12,29 @@
 #include <algorithm>
 #include "names.h"
 
-   //function prototype to use
-
+ //function prototypes
 void InputNames(std::vector<std::string>& names);
 
 int main()
 {
+    std::vector<std::string> names;
+    InputNames(names);
 
 }
  
+
+//function definitions
 void InputNames(std::vector<std::string>& names) {
 
     for (int i = 0; i < 10; i++) {
         std::string name;
-        std::cout << "Please enter a name: ";
         std::cin >> name;
+        std::cout << "Please enter a name: ";
         std::cout << "\n";
+
+
     }
-
 }
-
     //takes name list and prints
     void PrintNames(const std::vector<std::string>&names);
 
