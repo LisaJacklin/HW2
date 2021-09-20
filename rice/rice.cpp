@@ -12,8 +12,26 @@
 
 #include <iostream>
 
+int move= 1;
+int rice = 1;
+
+
 
 int main()
 {
-    
+	
+
+	while (move > 0) {
+		std::cout << move;
+		std::cout << " : ";
+
+		int grain = rice * rice;
+		
+		std::cout << grain;
+		std::cout << "\n";
+		++rice;
+		++move;
+	}
+	return 0;
+
 }
