@@ -12,14 +12,14 @@
 
 #include <iostream>
 
-int move= 1;
-int rice = 1;
-
 
 
 int main()
 {
-	
+
+	int move = 1;
+	int rice = 1;
+
 
 	while (move > 0) {
 		std::cout << move;
@@ -31,7 +31,13 @@ int main()
 		std::cout << "\n";
 		++rice;
 		++move;
+
+		if (grain >= 1000) {
+			std::cout << grain;
+			std::cout << move;
+			return 0;
+		}
 	}
-	return 0;
+
 
 }
