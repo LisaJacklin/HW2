@@ -16,12 +16,19 @@
 void InputNames(std::vector<std::string>& names);
 void PrintNames(const std::vector<std::string>& names);
 
+//remember bool has two values, true or false
+bool DoesNameExist(const std::string& nameToFind, const std::vector<std::string>& names);
+
 int main()
 {
     std::vector<std::string> name;
+    std::string nameToFind;
+
     InputNames(name);
     PrintNames(name);
+    DoesNameExist(nameToFind,name);
 
+  
 }
  
 
@@ -50,10 +57,26 @@ void PrintNames(const std::vector<std::string>& names) {
     std::cout << " }";
 }
 
-
-
 //remember bool has two values, true or false
-bool DoesNameExist(const std::string& nameToFind, const std::vector<std::string>& names);
+bool DoesNameExist(const std::string& nameToFind, const std::vector<std::string>& names) {
+    std::cout << "\nPlease insert a name to search: ";
+    std::string nametoFind;
+    std::cin >> nametoFind;
+
+    for (int i = 0; i < names.size(); i++) {
+        if (nameToFind == names[i]) {
+            return true;
+            std::cout << "Name does exist";
+        }
+        else {
+            return false;
+            std::cout << "Name does not exist";
+        }
+
+    }
+
+}
+
   
 
 
@@ -64,9 +87,4 @@ bool DoesNameExist(const std::string& nameToFind, const std::vector<std::string>
 //use the prototype
 
 
-//write a function that takes name lits and prints them out
-//void PrintNames(const std::vector<std::string>& names);
-
-//write a function taking a list of names and does smething interesting
-//use the function prototype for print names as a basis for this new function
 
