@@ -10,7 +10,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "names.h"
+#include <cctype>
 
  //function prototypes
 void InputNames(std::vector<std::string>& names);
@@ -18,9 +18,9 @@ void PrintNames(const std::vector<std::string>& names);
 
 int main()
 {
-    std::vector<std::string> names;
-    InputNames(names);
-    PrintNames(names);
+    std::vector<std::string> name;
+    InputNames(name);
+    PrintNames(name);
 
 }
  
@@ -30,9 +30,10 @@ int main()
 void InputNames(std::vector<std::string>& names) {
 
     for (int i = 0; i < 10; i++) {
-        std::string names;
-        std::cin >> names;
+        std::string name;
         std::cout << "Please enter a name: ";
+        std::cin >> name;
+        names.push_back(name);
         std::cout << "\n";
     }
 }
@@ -42,9 +43,9 @@ void PrintNames(const std::vector<std::string>& names) {
     
 
     std::cout << "Names: {";
-    for (int i = 0; i < 10; i++) {
-        std::string names;
-        std::cout << names << " ,";
+    for (int i = 0; i < names.size(); i++) {
+      
+        std::cout << names[i] << " ,";
     }
     std::cout << " }";
 }
