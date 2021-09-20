@@ -14,29 +14,40 @@
 
  //function prototypes
 void InputNames(std::vector<std::string>& names);
+void PrintNames(const std::vector<std::string>& names);
 
 int main()
 {
     std::vector<std::string> names;
     InputNames(names);
+    PrintNames(names);
 
 }
  
 
 //function definitions
+//takes and inputs 10 names into a list
 void InputNames(std::vector<std::string>& names) {
 
     for (int i = 0; i < 10; i++) {
-        std::string name;
-        std::cin >> name;
+        std::string names;
+        std::cin >> names;
         std::cout << "Please enter a name: ";
         std::cout << "\n";
-
-
     }
 }
-    //takes name list and prints
-    void PrintNames(const std::vector<std::string>&names);
+
+//takes name list and prints
+void PrintNames(const std::vector<std::string>& names) {
+    
+
+    std::cout << "Names: {";
+    for (int i = 0; i < 10; i++) {
+        std::string names;
+        std::cout << names << " ,";
+    }
+    std::cout << " }";
+}
 
 
 
